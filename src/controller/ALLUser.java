@@ -41,11 +41,11 @@ public class ALLUser {
 	@Test
 	public void addUser() throws Exception {
 		User user = new User();
-		user.setUsername("Amy");
-		user.setPassword("90902");
+		user.setUsername("小鱼");
+		user.setPassword("xiaoyu ");
 		String sql = "insert into userinfo values (null,?,?)";
 		Object[] params = {user.getUsername(),user.getPassword()};
-		runner.insert(JDBCUtils.getConnection(), sql, new BeanHandler<User>(User.class), params);
+			runner.insert(JDBCUtils.getConnection(), sql, new BeanHandler<User>(User.class), params);
 		System.out.println("添加成功");
 	}
 	/**
